@@ -1,0 +1,320 @@
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	a {cursor:pointer;outline:0}
+		
+	#wrap {
+		width: 1100px;
+		margin: 0 auto;
+		}
+		
+	#external-events {
+		float: left;
+		margin-top:10px;
+		width: 150px;
+		padding: 0 10px;
+		border: 3px solid #fff;
+		background: #eee;
+		text-align: left;
+		border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; -o-border-radius:5px; -khtml-border-radius:5px; -webkit-box-shadow:rgba(0,0,0,0.45) 0 1px 3px; -moz-box-shadow:rgba(0,0,0,0.45) 0 1px 3px; box-shadow:rgba(0,0,0,0.45) 0 1px 3px;
+		}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+		}
+		
+	.external-event { /* try to mimick the look of a real event */
+		margin: 10px 0;
+		padding: 2px 4px;
+		background: #3366CC;
+		color: #fff;
+		font-size: .85em;
+		cursor: pointer;
+		}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+		}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+		}
+
+	#calendar {
+		float: right;
+		width: 900px;
+		}
+		
+	.fc-agenda .fc-agenda-axis, .fc-event-time, .fc-event-title {font-size:11px}
+	.fc-border-separate tr.fc-last th, .fc-border-separate tr.fc-last td {font-size:13px}
+	.external-event, .fc-event-skin{background:#0088CC}
+	.fc-agenda-slots td{}
+	
+	.fc-event .detalles {
+		position:absolute;
+		
+		}
+		.fc-agenda-slots td div{height:40px}
+		
+	
+/* ===================================== panel de detalle ===================================== */
+
+.detail {
+	width:195px;
+	display:none;
+	background:#fff;
+	position:absolute;
+	padding:5px;
+	border:1px solid #efefef;
+	*border:1px solid #999;
+	border/*\**/:1px solid #999\9;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:left;
+	-moz-box-shadow: 0px 0px 8px #666; 
+	-webkit-box-shadow: 0px 0px 8px #666; 
+    box-shadow: 0px 0px 8px #666;
+	z-index:9999;
+	top:0;
+	left:0;
+	}
+
+.detail .line{
+	width:185px;
+	padding:5px;
+	float:left;
+	position:relative;	
+	}
+
+.line a#cancelbox {
+	background:url(cupertino/images/cancel.gif) left top no-repeat;
+	margin-right:12px;
+	padding:0 0 4px 20px;
+	color:#606060;
+	}
+	
+.line a#savebox {
+	background:url(cupertino/images/save.gif) left top no-repeat;
+	padding:0 0 4px 20px;
+	color:#606060;
+	}
+
+.line #closepanel {
+	position:absolute;
+	color:#fff;
+	font-size:11px;
+	right:5px;
+	top:5px;
+	text-decoration:none;
+	}
+
+.line a#dragit span {
+	display:none;
+	}
+
+.detail table {
+	text-align:left;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+
+.detail input {
+	margin:0;
+	margin:0;
+	vertical-align: text-bottom	;
+	}
+
+.nombreApellido {
+	color:white;
+	font-weight:bold;
+	}
+
+.staticName {
+	background:url(cupertino/images/icons.png) left top no-repeat;
+	padding-left:25px;
+	}
+
+.date {
+	
+	}
+
+.team2 {
+	display:block;
+	background:url(cupertino/images/icons.png) left -54px no-repeat;
+	margin-top:5px;
+	padding-left:25px;
+	}
+
+.hour {
+	background:url(cupertino/images/icons.png) left -26px no-repeat; padding-left:25px;
+	}
+
+.only {
+	font-weight:bold
+	}
+
+.team {
+	border-bottom:1px dashed #666;
+	padding:10px 0;
+	display:block;
+	color:#676767;
+	}
+	
+/* ===================================== search ===================================== */
+
+#sidebar {
+	float:left;
+	width:170px;
+	}
+
+#irPanel {
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	color:#000;
+	text-decoration:none;
+	}
+
+#irPanel:hover {
+	text-decoration:underline;
+		}
+
+#search {
+	width:150px;
+	text-align:left;
+	padding:10px;
+	border: 3px solid #FFFFFF;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	background:#eee;
+	display:block;
+	float:left;
+	-moz-box-shadow: 0px 0px 3px #666; 
+	-webkit-box-shadow: 0px 0px 3px #666; 
+    box-shadow: 0px 0px 3px #666;
+	margin-top:25px;
+	}
+
+#search span#title {
+	font-size:12px;
+	font-weight:bold;
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+	padding-bottom:5px;
+}
+
+#searchField {
+	width:125px;
+	height:18px;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	float:left;
+	}
+
+#buscarBtn {
+	margin:0;
+	padding:0;
+	height:19px;
+	width:19px;
+	border:1px solid #a3a3a3;
+	background:url(cupertino/images/lupa.gif) center top no-repeat #a3a3a3;
+	float:left;
+	cursor:pointer;
+	}
+
+/* ===================================== SELECT ===================================== */
+
+.select {
+	position: absolute;
+	width: 190px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 21px;
+	padding: 0 24px 0 8px;
+	color: #000;
+	font: 12px/21px arial,sans-serif;
+	background: url(cupertino/images/select.gif) no-repeat;
+	overflow: hidden;
+	opacity:1;
+	z-index:5;
+	text-align:left;
+}
+
+
+
+/* ===================================== botones mes ===================================== */
+
+#button_pepe {
+	display: inline-block;
+    position: relative;
+	margin-bottom: 1em;
+    vertical-align: top;
+	-moz-border-radius: 4px; 
+  	-webkit-border-radius: 4px; 
+    border-radius: 4px; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+    border: 1px solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+	}
+
+#mesAnt {
+	background:url(cupertino/images/left_off.jpg) center top no-repeat;
+	border:1px solid #d3d3d3;
+	width:33px;
+	height:27px;
+	display:block;
+	float:right;
+	text-indent:-9999px;
+	-moz-border-top-left-radius: 4px; 
+  	-webkit-border-top-left-radius: 4px; 
+    border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+  	-webkit-border-bottom-left-radius: 4px; 
+    border-bottom-left-radius: 4px; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
+	}
+
+#mesAnt:hover {
+	background:url(cupertino/images/left_on.jpg) center top no-repeat;
+	}
+	
+#mesSig {
+	background:url(cupertino/images/right_off.jpg) center top no-repeat;
+	border:1px solid #d3d3d3;
+	width:33px;
+	height:27px;
+	display:block;
+	float:right;
+	text-indent:-9999px;
+	-moz-border-top-right-radius: 4px; 
+  	-webkit-border-top-right-radius: 4px; 
+    border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+  	-webkit-border-bottom-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+	}
+
+#mesSig:hover {
+	background:url(cupertino/images/right_on.jpg) center top no-repeat;
+	}
+	
+#editBoxAsistio {
+	border-top: 1px dashed #666666;
+	}
+	
+	
+
+
+	

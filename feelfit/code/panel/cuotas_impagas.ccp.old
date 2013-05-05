@@ -1,0 +1,152 @@
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="{CCS_Style}" wizardThemeVersion="3.0">
+	<Components>
+		<IncludePage id="2" name="header" PathID="header" page="header.ccp">
+<Components/>
+<Events/>
+<Features/>
+</IncludePage>
+<Report id="3" secured="False" enablePrint="False" showMode="Web" sourceType="SQL" returnValueType="Number" linesPerWebPage="40" linesPerPhysicalPage="50" connection="Connection1" dataSource="select a.id,a.nombre,a.anio,a.mes from
+(
+select a.id,a.nombre,an.anio,an.mes
+from alumno a ,anios an
+where
+CONCAT( an.anio, an.mes ) &lt;=  concat(year(now()),month(now()))
+and CONCAT( an.anio, an.mes ) &gt;= concat(year(a.fechaalta),month(a.fechaalta))
+ORDER BY a.id, an.anio, an.mes
+) a
+left join
+(
+select al.id,al.nombre,m.mes,m.anio from alumno al
+LEFT JOIN movimientofacturacion m ON ( al.id = m.idAlumno )
+where
+CONCAT( m.anio, m.mes ) &lt;=  concat(year(now()),month(now()))
+ORDER BY al.id, m.anio, m.mes
+) b
+on (a.id = b.id and a.anio= b.anio and a.mes = b.mes)
+WHERE
+b.id is null" name="Report1" pageSizeLimit="100" wizardCaption=" Report1 " wizardLayoutType="Tabular">
+<Components>
+<Section id="4" visible="True" lines="0" name="Report_Header" wizardSectionType="ReportHeader">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Section>
+<Section id="5" visible="True" lines="1" name="Page_Header" wizardSectionType="PageHeader">
+<Components>
+<Sorter id="12" visible="True" name="Sorter_id" column="id" wizardCaption="Id" wizardSortingType="SimpleDir" wizardControl="id">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Sorter>
+<Sorter id="14" visible="True" name="Sorter_nombre" column="nombre" wizardCaption="Nombre" wizardSortingType="SimpleDir" wizardControl="nombre">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Sorter>
+<Sorter id="16" visible="True" name="Sorter_anio" column="anio" wizardCaption="Anio" wizardSortingType="SimpleDir" wizardControl="anio">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Sorter>
+<Sorter id="18" visible="True" name="Sorter_mes" column="mes" wizardCaption="Mes" wizardSortingType="SimpleDir" wizardControl="mes">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Sorter>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Section>
+<Section id="6" visible="True" lines="1" name="Detail">
+<Components>
+<ReportLabel id="13" fieldSourceType="DBColumn" dataType="Integer" html="False" hideDuplicates="False" resetAt="Report" name="id" fieldSource="id" wizardCaption="id" wizardSize="10" wizardMaxLength="10" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="False" wizardAlign="right" PathID="Report1Detailid">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</ReportLabel>
+<ReportLabel id="15" fieldSourceType="DBColumn" dataType="Text" html="False" hideDuplicates="False" resetAt="Report" name="nombre" fieldSource="nombre" wizardCaption="nombre" wizardSize="50" wizardMaxLength="250" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="False" PathID="Report1Detailnombre">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</ReportLabel>
+<ReportLabel id="17" fieldSourceType="DBColumn" dataType="Integer" html="False" hideDuplicates="False" resetAt="Report" name="anio" fieldSource="anio" wizardCaption="anio" wizardSize="10" wizardMaxLength="10" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="False" wizardAlign="right" PathID="Report1Detailanio">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</ReportLabel>
+<ReportLabel id="19" fieldSourceType="DBColumn" dataType="Integer" html="False" hideDuplicates="False" resetAt="Report" name="mes" fieldSource="mes" wizardCaption="mes" wizardSize="10" wizardMaxLength="10" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="False" wizardAlign="right" PathID="Report1Detailmes">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</ReportLabel>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Section>
+<Section id="7" visible="True" lines="0" name="Report_Footer" wizardSectionType="ReportFooter">
+<Components>
+<Panel id="8" visible="True" name="NoRecords" wizardNoRecords="No hay registros">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Section>
+<Section id="9" visible="True" lines="1" name="Page_Footer" wizardSectionType="PageFooter" pageBreakAfter="True">
+<Components>
+<Navigator id="10" size="10" type="Simple" pageSizes="1;5;10;25;50" name="Navigator" wizardPagingType="TextButtons" wizardFirst="True" wizardFirstText="|&lt;" wizardPrev="True" wizardPrevText="&lt;&lt;" wizardNext="True" wizardNextText="&gt;&gt;" wizardLast="True" wizardLastText="&gt;|" wizardPageNumbers="Simple" wizardSize="10" wizardTotalPages="False" wizardHideDisabled="False" wizardOfText="de" wizardImagesScheme="{ccs_style}">
+<Components/>
+<Events>
+<Event name="BeforeShow" type="Server">
+<Actions>
+<Action actionName="Hide-Show Component" actionCategory="General" id="11" action="Hide" conditionType="Parameter" dataType="Integer" condition="LessThan" name1="TotalPages" sourceType1="SpecialValue" name2="2" sourceType2="Expression"/>
+</Actions>
+</Event>
+</Events>
+<Attributes/>
+<Features/>
+</Navigator>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Section>
+</Components>
+<Events/>
+<TableParameters/>
+<JoinTables/>
+<JoinLinks/>
+<Fields/>
+<SPParameters/>
+<SQLParameters/>
+<ReportGroups/>
+<SecurityGroups/>
+<Attributes/>
+<Features/>
+</Report>
+</Components>
+	<CodeFiles>
+		<CodeFile id="Events" language="PHPTemplates" name="cuotas_impagas_events.php" forShow="False" comment="//"/>
+<CodeFile id="Code" language="PHPTemplates" name="cuotas_impagas.php" forShow="True" url="cuotas_impagas.php" comment="//"/>
+</CodeFiles>
+	<SecurityGroups/>
+<CachingParameters/>
+<Attributes/>
+<Features/>
+<Events/>
+</Page>

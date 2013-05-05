@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 4.2.00.040">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Asistenciaalumno</title>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-069F7D06
+
+var asistenciaalumno_DatePicker_fecha = new Object(); 
+asistenciaalumno_DatePicker_fecha.format           = "ShortDate";
+asistenciaalumno_DatePicker_fecha.style            = "Styles/{CCS_Style}/Style.css";
+asistenciaalumno_DatePicker_fecha.relativePathPart = "";
+asistenciaalumno_DatePicker_fecha.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//asistenciaalumnoButton_Delete_OnClick @5-3780D170
+function asistenciaalumnoButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End asistenciaalumnoButton_Delete_OnClick
+
+//bind_events @1-86923259
+function bind_events() {
+    addEventHandler("asistenciaalumnoButton_Delete", "click", asistenciaalumnoButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record asistenciaalumno -->
+<form id="asistenciaalumno" method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+            <td class="th"><strong>Agregar/Editar Asistenciaalumno </strong></td> 
+            <td class="HeaderRight"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="asistenciaalumnoidAlumno">Id Alumno</label></td> 
+            <td><input type="text" name="{idAlumno_Name}" value="{idAlumno}" maxlength="10" size="10" id="asistenciaalumnoidAlumno"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="asistenciaalumnofecha">Fecha</label></td> 
+            <td><input type="text" name="{fecha_Name}" value="{fecha}" maxlength="100" size="8" id="asistenciaalumnofecha">
+              <!-- BEGIN DatePicker DatePicker_fecha --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="asistenciaalumnoDatePicker_fecha"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0" alt="Show Date Picker" id="asistenciaalumnoDatePicker_fecha_Image"></a><!-- END DatePicker DatePicker_fecha --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="asistenciaalumnoasistio">Asistio</label></td> 
+            <td><input type="checkbox" name="{asistio_Name}" value="1" {asistio} id="asistenciaalumnoasistio"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="asistenciaalumnoidEquipamiento">Id Equipamiento</label></td> 
+            <td><input type="text" name="{idEquipamiento_Name}" value="{idEquipamiento}" maxlength="10" size="10" id="asistenciaalumnoidEquipamiento"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="asistenciaalumnoidInstructor">Id Instructor</label></td> 
+            <td><input type="text" name="{idInstructor_Name}" value="{idInstructor}" maxlength="10" size="10" id="asistenciaalumnoidInstructor"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Agregar" alt="Agregar" id="asistenciaalumnoButton_Insert" class="Button"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Enviar" alt="Enviar" id="asistenciaalumnoButton_Update" class="Button"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Borrar" alt="Borrar" id="asistenciaalumnoButton_Delete" class="Button"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record asistenciaalumno --><br>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Alumno</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record alumnoSearch -->
+<form id="alumnoSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Buscar Alumno</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="alumnoSearchs_nombre">Nombre</label></td> 
+            <td><input id="alumnoSearchs_nombre" maxlength="250" size="50" value="{s_nombre}" name="{s_nombre_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnoSearchs_domicilio">Domicilio</label></td> 
+            <td><input id="alumnoSearchs_domicilio" maxlength="250" size="50" value="{s_domicilio}" name="{s_domicilio_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnoSearchs_telefono">Telefono</label></td> 
+            <td><input id="alumnoSearchs_telefono" maxlength="20" value="{s_telefono}" name="{s_telefono_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnoSearchs_email">Email</label></td> 
+            <td><input id="alumnoSearchs_email" maxlength="128" size="50" value="{s_email}" name="{s_email_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="alumnoSearchButton_DoSearch" type="submit" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record alumnoSearch --><br>
+<!-- BEGIN Grid alumno -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Listado de Alumnos. Cantidad de Alumnos: {cont}</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_id --><a href="{Sort_URL}" id="alumnoSorter_id">Código</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_nombre --><a href="{Sort_URL}" id="alumnoSorter_nombre">Nombre</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nombre --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_tipodoc --><a href="{Sort_URL}" id="alumnoSorter_tipodoc">Tipo documento</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_tipodoc --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_nrodocumento --><a href="{Sort_URL}" id="alumnoSorter_nrodocumento">Nro. Documento</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nrodocumento --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_domicilio --><a href="{Sort_URL}" id="alumnoSorter_domicilio">Domicilio</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_domicilio --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_telefono --><a href="{Sort_URL}" id="alumnoSorter_telefono">Teléfono</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_telefono --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_email --><a href="{Sort_URL}" id="alumnoSorter_email">Email</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email --></th>
+ 
+          <th scope="col">Cuota&nbsp;</th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_comparte --><a href="{Sort_URL}" id="alumnoSorter_comparte">Training</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_comparte --></th>
+ 
+          <th scope="col">&nbsp;Activo</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="alumnoid_{alumno:rowNumber}">{id}</a>&nbsp;</td> 
+          <td style="{negrita}">{nombre}&nbsp;</td> 
+          <td style="{negrita}">{tipodoc}&nbsp;</td> 
+          <td style="{negrita}">{nrodocumento}&nbsp;</td> 
+          <td style="{negrita}">{domicilio}&nbsp;</td> 
+          <td style="{negrita}">{telefono}&nbsp;</td> 
+          <td style="{negrita}">{email}&nbsp;</td> 
+          <td style="{negrita}">{cuota}&nbsp;</td> 
+          <td style="{negrita}">{comparte}&nbsp;</td> 
+          <td>&nbsp;{activo}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">No hay registros</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="10"><a href="{alumno_Insert_Src}" id="alumnoalumno_Insert">Agregar Nuevo</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->&nbsp;{Page_Number} de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid alumno --><br>
+</body>
+</html>
