@@ -1,0 +1,17 @@
+Archivos del Sistema de Gimnasio Personalizado Feelfit
+
+Tener en cuenta que en agenda/ajax.php:
+define('REMOTE_SERVER_URL', 'http://feelfit.com.ar/panel/services/');
+
+Apunta a la dirección productiva, de no modificarse, usará los webservices productivos
+El procedure getSchedule2 fue creado con el user feelfit_ugim desde 201.216.209.57
+
+usuarios
+
+feelfit
+tc082011
+
+feelfit_ugim
+dunkel*123
+
+
