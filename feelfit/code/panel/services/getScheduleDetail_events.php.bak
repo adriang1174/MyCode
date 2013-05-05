@@ -1,0 +1,29 @@
+<?php
+//BindEvents Method @1-DC430887
+function BindEvents()
+{
+    global $detalle;
+    $detalle->CCSEvents["BeforeShowRow"] = "detalle_BeforeShowRow";
+}
+//End BindEvents Method
+
+//detalle_BeforeShowRow @2-65A877A7
+function detalle_BeforeShowRow(& $sender)
+{
+    $detalle_BeforeShowRow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $detalle; //Compatibility
+//End detalle_BeforeShowRow
+
+//Custom Code @20-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom Code
+
+//Close detalle_BeforeShowRow @2-C22108B4
+    return $detalle_BeforeShowRow;
+}
+//End Close detalle_BeforeShowRow
+?>

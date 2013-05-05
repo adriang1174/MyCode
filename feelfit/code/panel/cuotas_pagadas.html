@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>cuotas_pagadas</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record movimientofacturacionSearch -->
+<form id="movimientofacturacionSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Buscar</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="movimientofacturacionSearchs_anio">Año</label></td> 
+            <td><input id="movimientofacturacionSearchs_anio" maxlength="10" size="10" value="{s_anio}" name="{s_anio_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Mes&nbsp;</td> 
+            <td>
+              <p><label for="movimientofacturacionSearchs_mes" style="display: none;"></label>
+              <select id="movimientofacturacionSearchs_mes" name="{s_mes_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_mes_Options}
+              </select>
+ </p>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="movimientofacturacionSearchs_idAlumno">Alumno</label></td> 
+            <td>
+              <select id="movimientofacturacionSearchs_idAlumno" name="{s_idAlumno_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_idAlumno_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="movimientofacturacionSearchButton_DoSearch" type="submit" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record movimientofacturacionSearch --><br>
+<!-- BEGIN Report movimientofacturacion -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Cuotas pagadas</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th scope="col">Instructor&nbsp;</th>
+ 
+          <th scope="col">Mes</th>
+ 
+          <th scope="col">Año</th>
+ 
+          <th scope="col">Importe</th>
+ 
+          <th scope="col">Alumno</th>
+ 
+          <th scope="col">Turno</th>
+ 
+          <th scope="col">&nbsp;</th>
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="7">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+            <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+            <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On -->
+            <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section idInstructor_Header -->
+        <tr class="GroupCaption">
+          <th style="TEXT-ALIGN: right" scope="col">{instructor} </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp; </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp; </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp; </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp; </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp; </th>
+ 
+          <th style="TEXT-ALIGN: right" scope="col">&nbsp;</th>
+        </tr>
+ <!-- END Section idInstructor_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">{mes} </td> 
+          <td style="TEXT-ALIGN: right">{anio} </td> 
+          <td style="TEXT-ALIGN: right">$ {importe} </td> 
+          <td style="TEXT-ALIGN: right">{alumno} </td> 
+          <td>{idTurno} </td> 
+          <td><input id="movimientofacturacionDetailid_{movimientofacturacion:rowNumber}" type="hidden" value="{id}" name="{id_Name}">&nbsp;<a href="{Link1_Src}" id="movimientofacturacionDetailLink1_{movimientofacturacion:rowNumber}">Edit</a></td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section idInstructor_Footer -->
+        <tr class="SubTotal">
+          <td style="TEXT-ALIGN: right">Sub Total &nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">&nbsp;$ {Sum_importe} </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp;</td>
+        </tr>
+ <!-- END Section idInstructor_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No hay registros</td>
+        </tr>
+ <!-- END Panel NoRecords -->
+        <tr class="Total">
+          <td valign="baseline">Total </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">$ {TotalSum_importe} </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp;</td>
+        </tr>
+ <!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report movimientofacturacion --><br>
+</body>
+</html>

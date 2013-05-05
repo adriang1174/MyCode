@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Excepciondisponibilidadinstructor</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-DFE4E757
+
+var excepciondisponibilidadin_DatePicker_fecha = new Object(); 
+excepciondisponibilidadin_DatePicker_fecha.format           = "ShortDate";
+excepciondisponibilidadin_DatePicker_fecha.style            = "Styles/{CCS_Style}/Style.css";
+excepciondisponibilidadin_DatePicker_fecha.relativePathPart = "";
+excepciondisponibilidadin_DatePicker_fecha.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//excepciondisponibilidadinButton_Delete_OnClick @5-753DBC75
+function excepciondisponibilidadinButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End excepciondisponibilidadinButton_Delete_OnClick
+
+//bind_events @1-C77EB98F
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("excepciondisponibilidadinButton_Delete", "click", excepciondisponibilidadinButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record excepciondisponibilidadin -->
+<form id="excepciondisponibilidadin" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Inasistencia Instructor&nbsp;</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="excepciondisponibilidadinidInstructor">Instructor</label></td> 
+            <td>
+              <select id="excepciondisponibilidadinidInstructor" name="{idInstructor_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idInstructor_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="excepciondisponibilidadinfecha">Fecha</label></td> 
+            <td><input id="excepciondisponibilidadinfecha" maxlength="100" size="8" value="{fecha}" name="{fecha_Name}">
+              <!-- BEGIN DatePicker DatePicker_fecha --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="excepciondisponibilidadinDatePicker_fecha"><img id="excepciondisponibilidadinDatePicker_fecha_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_fecha --></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="excepciondisponibilidadinButton_Insert" type="submit" alt="Agregar" value="Agregar" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="excepciondisponibilidadinButton_Update" type="submit" alt="Enviar" value="Enviar" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="excepciondisponibilidadinButton_Delete" type="submit" alt="Borrar" value="Borrar" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record excepciondisponibilidadin --><br>
+</body>
+</html>

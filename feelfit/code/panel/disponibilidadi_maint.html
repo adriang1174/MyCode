@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Disponibilidadinstructor</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-B75B063E
+
+var disponibilidadinstructor_DatePicker_fechaespec = new Object(); 
+disponibilidadinstructor_DatePicker_fechaespec.format           = "ShortDate";
+disponibilidadinstructor_DatePicker_fechaespec.style            = "Styles/{CCS_Style}/Style.css";
+disponibilidadinstructor_DatePicker_fechaespec.relativePathPart = "";
+disponibilidadinstructor_DatePicker_fechaespec.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//disponibilidadinstructorButton_Delete_OnClick @5-48FF1D2A
+function disponibilidadinstructorButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End disponibilidadinstructorButton_Delete_OnClick
+
+//bind_events @1-CFE6D84A
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    addEventHandler("disponibilidadinstructorButton_Delete", "click", disponibilidadinstructorButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record disponibilidadinstructor -->
+<form id="disponibilidadinstructor" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Horario de Instructor</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructoridInstructor">Instructor</label></td> 
+            <td>
+              <select id="disponibilidadinstructoridInstructor" name="{idInstructor_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idInstructor_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructoridEquipamiento">Equipamiento</label></td> 
+            <td>
+              <select id="disponibilidadinstructoridEquipamiento" name="{idEquipamiento_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idEquipamiento_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructorrangodias">Dias</label></td> 
+            <td><input id="disponibilidadinstructorrangodias" type="hidden" value="{rangodias}" name="{rangodias_Name}">&nbsp;&nbsp; <font style="BACKGROUND-COLOR: #ffffff">L</font> <input id="disponibilidadinstructorl" type="checkbox" value="1" name="{l_Name}" {l}>&nbsp; <font style="BACKGROUND-COLOR: #ffffff">M</font> <input id="disponibilidadinstructorm" type="checkbox" value="1" name="{m_Name}" {m}>&nbsp; <font style="BACKGROUND-COLOR: #ffffff">X </font><input id="disponibilidadinstructorx" type="checkbox" value="1" name="{x_Name}" {x}>&nbsp; <font style="BACKGROUND-COLOR: #ffffff">J </font><input id="disponibilidadinstructorj" type="checkbox" value="1" name="{j_Name}" {j}><font style="BACKGROUND-COLOR: #ffffff">&nbsp; V </font><input id="disponibilidadinstructorv" type="checkbox" value="1" name="{v_Name}" {v}>&nbsp; <font style="BACKGROUND-COLOR: #ffffff">S </font><input id="disponibilidadinstructors" type="checkbox" value="1" name="{s_Name}" {s}>&nbsp; <font style="BACKGROUND-COLOR: #ffffff">D </font><input id="disponibilidadinstructord" type="checkbox" value="1" name="{d_Name}" {d}></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructorfechaespec">Fechaespec</label></td> 
+            <td><input id="disponibilidadinstructorfechaespec" maxlength="100" size="8" value="{fechaespec}" name="{fechaespec_Name}">
+              <!-- BEGIN DatePicker DatePicker_fechaespec --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="disponibilidadinstructorDatePicker_fechaespec"><img id="disponibilidadinstructorDatePicker_fechaespec_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_fechaespec --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructorhoraini">Horaini</label></td> 
+            <td><input id="disponibilidadinstructorhoraini" maxlength="10" size="10" value="{horaini}" name="{horaini_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="disponibilidadinstructorhorafin">Horafin</label></td> 
+            <td><input id="disponibilidadinstructorhorafin" maxlength="10" size="10" value="{horafin}" name="{horafin_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="disponibilidadinstructorButton_Insert" type="submit" alt="Agregar" value="Agregar" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="disponibilidadinstructorButton_Update" type="submit" alt="Enviar" value="Enviar" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="disponibilidadinstructorButton_Delete" type="submit" alt="Borrar" value="Borrar" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record disponibilidadinstructor --><br>
+</body>
+</html>
