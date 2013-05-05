@@ -1,0 +1,15 @@
+.instructor_1, .instructor_1 div,
+.fc-agenda .instructor_1 .fc-event-time,
+.instructor_1 a {
+    background-color: #A9F5D0; /* background color */
+    border-color: #A9F5D0;     /* border color */
+    color: yellow;           /* text color */
+}
+
+.instructor_2, .instructor_2 div,
+.fc-agenda .instructor_2 .fc-event-time,
+.instructor_2 a {
+    background-color: red; /* background color */
+    border-color: red;     /* border color */
+    color: black;           /* text color */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Alumno</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record alumno -->
+<form id="alumno" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Alumno </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="alumnonombre">Nombre</label></td> 
+            <td><input id="alumnonombre" maxlength="250" size="50" value="{nombre}" name="{nombre_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnotipodoc">Tipodoc</label></td> 
+            <td><input id="alumnotipodoc" maxlength="10" size="10" value="{tipodoc}" name="{tipodoc_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnonrodocumento">Nrodocumento</label></td> 
+            <td><input id="alumnonrodocumento" maxlength="12" size="12" value="{nrodocumento}" name="{nrodocumento_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnodomicilio">Domicilio</label></td> 
+            <td><input id="alumnodomicilio" maxlength="250" size="50" value="{domicilio}" name="{domicilio_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnotelefono">Telefono</label></td> 
+            <td><input id="alumnotelefono" maxlength="20" value="{telefono}" name="{telefono_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Cuota</td> 
+            <td><label for="alumnocuota" style="display: none;"></label><input id="alumnocuota" value="{cuota}" name="{cuota_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnoemail">Email</label></td> 
+            <td><input id="alumnoemail" maxlength="128" size="50" value="{email}" name="{email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="alumnocomparte">Training</label></td> 
+            <td><input id="alumnocomparte" type="checkbox" value="1" name="{comparte_Name}" {comparte}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Activo</td> 
+            <td><input id="alumnoactivo" type="checkbox" value="1" name="{activo_Name}" {activo}></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="alumnoButton_Insert" type="submit" alt="Agregar" value="Agregar" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="alumnoButton_Update" type="submit" alt="Enviar" value="Enviar" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="alumnoButton_Delete" type="submit" alt="Borrar" value="Borrar" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record alumno --><br>
+</body>
+</html>

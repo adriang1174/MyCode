@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Asistenciaalumno</title>
+<meta content="CodeCharge Studio 4.2.00.040" name="GENERATOR">
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-0D1E1D56
+
+var asistenciaalumnoSearch_DatePicker_s_fdesde1 = new Object(); 
+asistenciaalumnoSearch_DatePicker_s_fdesde1.format           = "ShortDate";
+asistenciaalumnoSearch_DatePicker_s_fdesde1.style            = "Styles/{CCS_Style}/Style.css";
+asistenciaalumnoSearch_DatePicker_s_fdesde1.relativePathPart = "";
+asistenciaalumnoSearch_DatePicker_s_fdesde1.themeVersion = "3.0";
+
+var asistenciaalumnoSearch_DatePicker_s_fhasta1 = new Object(); 
+asistenciaalumnoSearch_DatePicker_s_fhasta1.format           = "ShortDate";
+asistenciaalumnoSearch_DatePicker_s_fhasta1.style            = "Styles/{CCS_Style}/Style.css";
+asistenciaalumnoSearch_DatePicker_s_fhasta1.relativePathPart = "";
+asistenciaalumnoSearch_DatePicker_s_fhasta1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-4D5D7446
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<!-- BEGIN Record asistenciaalumnoSearch -->
+<form id="asistenciaalumnoSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Buscar alumno</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">Fecha desde</td> 
+            <td><label for="asistenciaalumnoSearchs_fdesde" style="display: none;"></label><input id="asistenciaalumnoSearchs_fdesde" size="12" value="{s_fdesde}" name="{s_fdesde_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_fdesde1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="asistenciaalumnoSearchDatePicker_s_fdesde1"><img id="asistenciaalumnoSearchDatePicker_s_fdesde1_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_fdesde1 --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Fecha hasta</td> 
+            <td><label for="asistenciaalumnoSearchs_fhasta" style="display: none;"></label><input id="asistenciaalumnoSearchs_fhasta" size="12" value="{s_fhasta}" name="{s_fhasta_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_fhasta1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="asistenciaalumnoSearchDatePicker_s_fhasta1"><img id="asistenciaalumnoSearchDatePicker_s_fhasta1_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_fhasta1 --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Alumno</td> 
+            <td>
+              <select id="asistenciaalumnoSearchs_alumno" name="{s_alumno_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_alumno_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="asistenciaalumnoSearchButton_DoSearch" type="submit" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record asistenciaalumnoSearch --><br>
+<!-- BEGIN Grid asistenciaalumno -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Listado de&nbsp;asistencias</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_id --><a href="{Sort_URL}" id="asistenciaalumnoSorter_id">Id</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idAlumno --><a href="{Sort_URL}" id="asistenciaalumnoSorter_idAlumno">Alumno</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_idAlumno --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_fecha --><a href="{Sort_URL}" id="asistenciaalumnoSorter_fecha">Fecha</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_asistio --><a href="{Sort_URL}" id="asistenciaalumnoSorter_asistio">Asistio</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_asistio --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idEquipamiento --><a href="{Sort_URL}" id="asistenciaalumnoSorter_idEquipamiento">Equipamiento</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_idEquipamiento --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idInstructor --><a href="{Sort_URL}" id="asistenciaalumnoSorter_idInstructor">Instructor</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_idInstructor --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="asistenciaalumnoid_{asistenciaalumno:rowNumber}">{id}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><input id="asistenciaalumnoidAlumno_{asistenciaalumno:rowNumber}" type="hidden" value="{idAlumno}" name="{idAlumno_Name}">&nbsp;{alumno_nombre}</td> 
+          <td>{fecha}&nbsp;</td> 
+          <td><label for="asistenciaalumnoasistio_{asistenciaalumno:rowNumber}" style="display: none;"></label><input id="asistenciaalumnoasistio_{asistenciaalumno:rowNumber}" type="checkbox" value="1" name="{asistio_Name}" {asistio}>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><input id="asistenciaalumnoidEquipamiento_{asistenciaalumno:rowNumber}" type="hidden" value="{idEquipamiento}" name="{idEquipamiento_Name}">&nbsp;{descripcion}</td> 
+          <td style="TEXT-ALIGN: right"><input id="asistenciaalumnoidInstructor_{asistenciaalumno:rowNumber}" type="hidden" value="{idInstructor}" name="{idInstructor_Name}">&nbsp;{instructor_nombre}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No hay registros</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->&nbsp;{Page_Number} de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid asistenciaalumno --><br>
+</body>
+</html>

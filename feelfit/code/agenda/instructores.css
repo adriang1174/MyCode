@@ -1,0 +1,23 @@
+.instructor_1, .instructor_1 div,
+.fc-agenda .instructor_1 .fc-event-time,
+.instructor_1 a {
+    background-color: #58ACFA; /* background color */
+    border-color: #D8D8D8;     /* border color */
+    color: yellow;           /* text color */
+}
+
+.instructor_2, .instructor_2 div,
+.fc-agenda .instructor_2 .fc-event-time,
+.instructor_2 a {
+    background-color: #E2A9F3; /* background color */
+    border-color: #E2A9F3;     /* border color */
+    color: black;           /* text color */
+}
+
+.instructor_3, .instructor_3 div,
+.fc-agenda .instructor_3 .fc-event-time,
+.instructor_3 a {
+    background-color: #F3F781; /* background color */
+    border-color: #F3F781;     /* border color */
+    color: black;           /* text color */
+}
